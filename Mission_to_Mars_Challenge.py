@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[18]:
+
+
 #import splinter and beautiful soup
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
@@ -86,9 +92,13 @@ img_url =f'https://spaceimages-mars.com/{img_url_rel}'
 img_url
 
 
+# In[12]:
+
 
 import pandas as pd
 
+
+# In[13]:
 
 
 df = pd.read_html('https://galaxyfacts-mars.com')[0]
@@ -97,10 +107,13 @@ df.set_index('description',inplace=True)
 df
 
 
+# In[14]:
 
 
 df.to_html()
 
+
+# In[15]:
 
 
 browser.quit()
@@ -108,10 +121,16 @@ browser.quit()
 
 # # Challenge Deliverable 1
 
+# In[19]:
+
+
 # 1. Use browser to visit the URL 
 url = 'https://marshemispheres.com/'
 
 browser.visit(url)
+
+
+# In[20]:
 
 
 # 2. Create a list to hold the images and titles.
@@ -138,9 +157,15 @@ for img in range(4):
 browser.quit()
     
 
+
+# In[21]:
+
+
 # 4. Print the list that holds the dictionary of each image url and title.
 hemisphere_image_urls
 
+
+# In[ ]:
 
 
 
